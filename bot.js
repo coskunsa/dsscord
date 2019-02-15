@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+process.env.BOT_TOKENconst Discord = require('discord.js');
 const client = new Discord.Client();
 const ayarlar = require('./ayarlar.json');
 const chalk = require('chalk');
@@ -128,4 +128,4 @@ client.on('error', e => {
   console.log(chalk.bgRed(e.replace(regToken, 'that was redacted')));
 });
 
-client.login(ayarlar.token);
+client.login(process.env.BOT_TOKEN);
